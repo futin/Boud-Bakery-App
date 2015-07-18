@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dirty_grey_img"
+    android:id="@+id/budinTimerLayout">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Boudin Lunch Timer"
+        android:id="@+id/textView"
+        android:layout_marginTop="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffa8a8a6"
+        android:textSize="30dp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Set Break Time End"
+        android:id="@+id/breakTimeText"
+        android:textStyle="bold"
+        android:textIsSelectable="false"
+        android:textSize="30dp"
+        android:textColor="#ffa8a8a6"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="152dp" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/pickerDate"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/breakTimeText"
+        android:layout_marginTop="35dp"
+        android:textSize="25dp"
+        android:textColor="#ffa8a8a6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Break Time Reminder"
+        android:id="@+id/breakReminderTxt"
+        android:layout_below="@+id/pickerDate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:textStyle="bold|italic"
+        android:textSize="30dp"
+        android:textColor="#ffa8a8a6" />
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/breakReminderTxt"
+        android:layout_toStartOf="@+id/btnBreakTime"
+        android:id="@+id/radioGroupReminder"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10 seconds"
+            android:id="@+id/radio10"
+            android:layout_below="@+id/breakReminderTxt"
+            android:layout_alignStart="@+id/breakTimeText"
+            android:layout_marginTop="15dp"
+            android:checked="false"
+            android:textSize="20dp"
+            android:textColor="#caffffff" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20 seconds"
+            android:id="@+id/radio20"
+            android:layout_alignTop="@+id/radio10"
+            android:layout_alignEnd="@+id/pickerDate"
+            android:checked="false"
+            android:textSize="20dp"
+            android:layout_marginTop="15dp"
+            android:textColor="#caffffff" />
+
+        <RadioButton
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:text="1 minute"
+            android:id="@+id/radioMinute"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/radio10"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#caffffff" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnBreakTime"
+        android:text="Set Break Reminder"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_shape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:textColor="#D9D9D7"
+        android:textSize="15dp"
+        android:nestedScrollingEnabled="false"
+        android:layout_marginRight="25dp"
+        android:layout_below="@+id/remindCounter"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="50dp" />
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/pickerDate"
+        android:layout_below="@+id/textView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Are you on a break?"
+            android:id="@+id/textView12"
+            android:layout_gravity="center_horizontal"
+            android:textSize="30dp"
+            android:textStyle="bold|italic"
+            android:layout_marginTop="15dp"
+            android:textColor="#caffffff" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            android:id="@+id/radioYes"
+            android:layout_alignTop="@+id/radioNo"
+            android:layout_alignEnd="@+id/pickerDate"
+            android:layout_marginTop="30dp"
+            android:checked="false"
+            android:layout_marginLeft="15dp"
+            android:textSize="20dp"
+            android:textColor="#caffffff" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:id="@+id/radioNo"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="-32dp"
+            android:layout_marginLeft="280dp"
+            android:checked="false"
+            android:textSize="20dp"
+            android:textColor="#caffffff" />
+    </RadioGroup>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:id="@+id/progressBarTimer"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/radioGroupReminder"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:text="Reset "
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_shape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:textColor="#D9D9D7"
+        android:textSize="15dp"
+        android:nestedScrollingEnabled="false"
+        android:layout_below="@+id/pickerDate"
+        android:layout_alignStart="@+id/radioGroupReminder"
+        android:layout_marginTop="15dp" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:text="Stop"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_shape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:textColor="#D9D9D7"
+        android:textSize="15dp"
+        android:nestedScrollingEnabled="false"
+        android:layout_alignBottom="@+id/btnReset"
+        android:layout_toEndOf="@+id/radioGroupReminder" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/remindCounter"
+        android:layout_marginRight="30dp"
+        android:inputType="number"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_below="@+id/txtReminderCount"
+        android:layout_alignEnd="@+id/btnBreakTime"
+        android:layout_toEndOf="@+id/radioGroupReminder"
+        android:layout_marginLeft="30dp" />
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Reminder count"
+        android:id="@+id/txtReminderCount"
+        android:layout_marginLeft="7dp"
+        android:gravity="center_horizontal"
+        android:textSize="18dp"
+        android:layout_marginRight="7dp"
+        android:layout_below="@+id/breakReminderTxt"
+        android:layout_alignStart="@+id/btnBreakTime"
+        android:layout_alignEnd="@+id/btnBreakTime"
+        android:textColor="#caffffff" />
+
+    <include layout="@layout/mini_game"></include>
+</RelativeLayout>

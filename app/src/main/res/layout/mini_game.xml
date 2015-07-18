@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:id="@+id/layoutGame"
+    android:visibility="visible">
+
+    <Button
+        android:layout_width="123dp"
+        android:layout_height="130dp"
+        android:text="Click me for WIN"
+        android:background="@drawable/game_button_shape"
+        android:id="@+id/btnClickMe"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="65dp"
+        android:textSize="25dp"
+        android:layout_weight="0.13"
+        android:gravity="center_vertical|center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/txtClicked"
+        android:layout_gravity="right"
+        android:layout_weight="0.11"
+        android:layout_alignTop="@+id/btnClickMe"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="35dp"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click as fast as possible"
+        android:id="@+id/txtTitle"
+        android:layout_above="@+id/txtClicked"
+        android:layout_marginBottom="44dp"
+        android:textSize="25dp"
+        android:layout_alignParentStart="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You can proceed with your Break time !"
+        android:id="@+id/txtWin"
+        android:layout_below="@+id/btnClickMe"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="22dp"
+        android:textStyle="bold|italic" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar"
+        android:layout_below="@+id/txtWin"
+        android:numStars="5"
+        android:layout_alignStart="@+id/btnClickMe" />
+
+</RelativeLayout>
