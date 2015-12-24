@@ -71,7 +71,6 @@ public class MainActivity extends Activity implements View.OnClickListener, View
     Handler handler=new Handler();
     MediaPlayer mp;
     ObjectAnimator animateTrans;
-
     int progressStatus=0;
 
     //checking if break time is setup
@@ -273,15 +272,9 @@ public class MainActivity extends Activity implements View.OnClickListener, View
     @Override
     public void onResume() {
         checkRadioButtons();
-        Log.i("","pause: " +isOnPauseCalled);
-        Log.i("","getMax: "+getMaxSeconds());
-
-        Log.i("","timer: "+timerIsOn);
 
         if(isOnPauseCalled && timerIsOn) {
-            pickerDate.setEnabled(false);
 
-            progressBarTimer.setMax(getMaxSeconds());
         }else{
             pickerDate.setEnabled(true);
             progressBarTimer.setProgress(0);
@@ -422,6 +415,8 @@ public class MainActivity extends Activity implements View.OnClickListener, View
         txtReminderCount.setEnabled(false);
         btnBreakReminder.setEnabled(false);
         btnBreakReminder.setAlpha(0.6f);
+        btnStop.setEnabled(true);
+        btnStop.setAlpha(1f);
         Log.i("","timeReminder: "+timeReminderCounter );
         Log.i("","countTimes: "+countTimes );
 
@@ -598,7 +593,7 @@ public class MainActivity extends Activity implements View.OnClickListener, View
             mp=null;
         }
         Vibrator v = (Vibrator) this.getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
-        v.vibrate(2000);
+        v.vibrate(1500);
         Uri notificationRingtone= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         Uri alarmRingtone= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
 
@@ -632,7 +627,7 @@ public class MainActivity extends Activity implements View.OnClickListener, View
             }else if (ratingBar.getRating()==3){
                 nextLevel(2000, 22, 4, "Does your finger hurts?!");
             }else if (ratingBar.getRating()==4){
-                nextLevel(1800, 25, 5, "Level impossible!");
+                nextLevel(1800, 21, 5, "Level impossible!");
             }else{
                 btnClickMe.setEnabled(false);
                 txtTitle.setVisibility(View.INVISIBLE);
