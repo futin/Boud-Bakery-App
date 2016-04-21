@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BoudinBreakApp.iml" filepath="$PROJECT_DIR$/BoudinBreakApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Boudin-Break-App.iml" filepath="$PROJECT_DIR$/Boudin-Break-App.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
 </project>
-
